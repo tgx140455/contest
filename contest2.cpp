@@ -4,6 +4,7 @@
 #include <ctime>
 using namespace std;
 
+
 int main()
 {
 	const int MAX_REFEREES = 50, MAX_PLAYERS = 100;
