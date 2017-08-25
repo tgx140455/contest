@@ -7,14 +7,14 @@ int main()
 {
 	int referees, players;
 	double x, max, min, sum, aver;
-	cout << "ÊäÈëÆÀÎ¯ÈËÊı£º" << endl;
+	cout << "è¾“å…¥è¯„å§”äººæ•°ï¼š" << endl;
 	cin >> referees;
 	if(referees<=2)
 	{
-		cout << "ÆÀÎ¯ÈËÊı¹ıÉÙ" << endl;
+		cout << "è¯„å§”äººæ•°è¿‡å°‘" << endl;
 		return -1;
 	}
-	cout << "ÊäÈëÑ¡ÊÖÈËÊı£º" << endl;
+	cout << "è¾“å…¥é€‰æ‰‹äººæ•°ï¼š" << endl;
 	cin >> players;
 
 	time_t t;
@@ -29,16 +29,16 @@ int main()
 		for (int j = 0; j < referees; j++) 
 		{
 			x = (rand() % 21 + 80) / 10.0;
-			cout << x << '\t';  //¿Õ¸ñ
+			cout << x << '\t';  //ç©ºæ ¼
 			if (x > max) max = x;
 			if (x < min) min = x;
 			sum += x;
 		}
 		aver = (sum - min - max) / (referees - 2);
-		cout << "\nÈ¥µôÒ»¸ö×î¸ß·Ö " << max << endl
-			<< "È¥µôÒ»¸ö×îµÍ·Ö " << min << endl
-			<< "×îºóµÃ·ÖÎª " << aver << endl;
-		getch();   //×÷ÓÃÊÇÈÎÒâ¼ü¼ÌĞø
+		cout << "\nå»æ‰ä¸€ä¸ªæœ€é«˜åˆ† " << max << endl
+			<< "å»æ‰ä¸€ä¸ªæœ€ä½åˆ† " << min << endl
+			<< "æœ€åå¾—åˆ†ä¸º " << aver << endl;
+		getch();   //ä½œç”¨æ˜¯ä»»æ„é”®ç»§ç»­
 	}
 
 
