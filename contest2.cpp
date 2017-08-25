@@ -9,24 +9,24 @@ int main()
 	const int MAX_REFEREES = 50, MAX_PLAYERS = 100;
 
 	int referees, players;
-	double x[MAX_PLAYERS][MAX_REFEREES], aver[MAX_PLAYERS];   //¸öÊı±ØĞëÎª³£Á¿ 1
+	double x[MAX_PLAYERS][MAX_REFEREES], aver[MAX_PLAYERS];   //ä¸ªæ•°å¿…é¡»ä¸ºå¸¸é‡ 1
 
 	double max, min, sum;
 
 	int rank[MAX_PLAYERS], i, j;
 
-	cout << "ÊäÈëÆÀÎ¯ÈËÊı£º" << endl;
+	cout << "è¾“å…¥è¯„å§”äººæ•°ï¼š" << endl;
 	cin >> referees;
 	if (referees <= 2||referees>MAX_REFEREES)
 	{
-		cout << "ÆÀÎ¯ÈËÊı¹ıÉÙ»ò¹ı¶à" << endl;
+		cout << "è¯„å§”äººæ•°è¿‡å°‘æˆ–è¿‡å¤š" << endl;
 		return -1;
 	}
-	cout << "ÊäÈëÑ¡ÊÖÈËÊı£º" << endl;
+	cout << "è¾“å…¥é€‰æ‰‹äººæ•°ï¼š" << endl;
 	cin >> players;
 	if (players > MAX_PLAYERS)
 	{
-		cout << "Ñ¡ÊÖ¹ı¶à" << endl;
+		cout << "é€‰æ‰‹è¿‡å¤š" << endl;
 		return -2;
 	}
 
@@ -42,16 +42,16 @@ int main()
 		for (j = 0; j < referees; j++)
 		{
 			x[i][j] = (rand() % 21 + 80) / 10.0;
-			cout << x[i][j] << '\t';  //¿Õ¸ñ
+			cout << x[i][j] << '\t';  //ç©ºæ ¼
 			if (x[i][j] > max) max = x[i][j];
 			if (x[i][j] < min) min = x[i][j];
 			sum += x[i][j];
 		}
 		aver[i] = (sum - min - max) / (referees - 2);
-		cout << "\nÈ¥µôÒ»¸ö×î¸ß·Ö " << max << endl
-			<< "È¥µôÒ»¸ö×îµÍ·Ö " << min << endl
-			<< "×îºóµÃ·ÖÎª " << aver[i] << endl;
-		getch();   //×÷ÓÃÊÇÈÎÒâ¼ü¼ÌĞø
+		cout << "\nå»æ‰ä¸€ä¸ªæœ€é«˜åˆ† " << max << endl
+			<< "å»æ‰ä¸€ä¸ªæœ€ä½åˆ† " << min << endl
+			<< "æœ€åå¾—åˆ†ä¸º " << aver[i] << endl;
+		getch();   //ä½œç”¨æ˜¯ä»»æ„é”®ç»§ç»­
 	}
 
 	for(i=0;i<players;i++)
