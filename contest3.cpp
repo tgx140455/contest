@@ -4,12 +4,13 @@
 #include <ctime>
 using namespace std;
 
+
 int main()
 {
 	
 
 	int referees, players;
-	double *x, *aver;   //¸öÊı±ØĞëÎª³£Á¿ 1
+	double *x, *aver;   //ä¸ªæ•°å¿…é¡»ä¸ºå¸¸é‡ 1
 
 
 
@@ -19,14 +20,14 @@ int main()
 
 	
 
-	cout << "ÊäÈëÆÀÎ¯ÈËÊı£º" << endl;
+	cout << "è¾“å…¥è¯„å§”äººæ•°ï¼š" << endl;
 	cin >> referees;
 	if (referees <= 2 )
 	{
-		cout << "ÆÀÎ¯ÈËÊı¹ıÉÙ" << endl;
+		cout << "è¯„å§”äººæ•°è¿‡å°‘" << endl;
 		return -1;
 	}
-	cout << "ÊäÈëÑ¡ÊÖÈËÊı£º" << endl;
+	cout << "è¾“å…¥é€‰æ‰‹äººæ•°ï¼š" << endl;
 	cin >> players;
 
 	rank = new int[players];
@@ -58,16 +59,16 @@ int main()
 		for (j = 0; j < referees; j++)
 		{
 			x[i*referees+j] = (rand() % 21 + 80) / 10.0;
-			cout << x[i*referees + j] << '\t';  //¿Õ¸ñ
+			cout << x[i*referees + j] << '\t';  //ç©ºæ ¼
 			if (x[i*referees + j] > max) max = x[i*referees + j];
 			if (x[i*referees + j] < min) min = x[i*referees + j];
 			sum += x[i*referees + j];
 		}
 		aver[i] = (sum - min - max) / (referees - 2);
-		cout << "\nÈ¥µôÒ»¸ö×î¸ß·Ö " << max << endl
-			<< "È¥µôÒ»¸ö×îµÍ·Ö " << min << endl
-			<< "×îºóµÃ·ÖÎª " << aver[i] << endl;
-		getch();   //×÷ÓÃÊÇÈÎÒâ¼ü¼ÌĞø
+		cout << "\nå»æ‰ä¸€ä¸ªæœ€é«˜åˆ† " << max << endl
+			<< "å»æ‰ä¸€ä¸ªæœ€ä½åˆ† " << min << endl
+			<< "æœ€åå¾—åˆ†ä¸º " << aver[i] << endl;
+		getch();   //ä½œç”¨æ˜¯ä»»æ„é”®ç»§ç»­
 	}
 
 	for (i = 0; i<players; i++)
